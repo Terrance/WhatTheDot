@@ -1,1 +1,203 @@
-{}
+{
+    ".addressbook": ["alpine", "config"],
+    ".alias": ["csh", "config"],
+    ".appcfg_cookies": ["app-engine", "session"],
+    ".appcfg_nag": ["app-engine", "config"],
+    ".appcfg_oauth2_tokens": ["app-engine", "session"],
+    ".aptitude": ["aptitude", {
+        "cache": ["aptitude", "cache"],
+        "config": ["aptitude", "config"]
+    }],
+    ".bash_history": ["bash", "history"],
+    ".bashrc": ["bash", "config"],
+    ".bash_login": ["bash", "config"],
+    ".bash_logout": ["bash", "config"],
+    ".bash_profile": ["bash", "config"],
+    ".blender": ["blender", "config", {}],
+    ".bogofilter": ["bogofilter", {
+        "wordlist.db": ["bogofilter", "config"]
+    }],
+    ".cache": [{
+        "chromium": ["chromium", "cache", {}],
+        "google-chrome": ["chrome", "cache", {}]
+    }],
+    ".config": [{
+        "chromium": ["chromium", "config", {}],
+        "evolution": ["evolution", "config", {}],
+        "fish": ["fish", {
+            "config.fish": ["fish", "config"],
+            "fish_history": ["fish", "history"]
+        }],
+        "fontconfig": ["fontconfig", {
+            "conf.d": ["fontconfig", "config", {}],
+            "fonts.conf": ["fontconfig", "config"]
+        }],
+        "google-chrome": ["chrome", "config", {}],
+        "hangups": ["hangups", {
+            "hangups.conf": ["hangups", "config"]
+        }],
+        "htop": ["htop", {
+            "htoprc": ["htop", "config"]
+        }],
+        "keybase": ["keybase", {
+            "config.json": ["keybase", "config"]
+        }],
+        "pacmatic": ["pacmatic", "config"],
+        "profanity": ["profanity", {
+            "profrc": ["profanity", "config"],
+            "themes": ["profanity", "config", {}]
+        }],
+        "syncthing": ["syncthing", {
+            "cert.pem": ["syncthing", "key"],
+            "config.xml": ["syncthing", "config"],
+            "key.pem": ["syncthing", "key"]
+        }]
+    }],
+    ".cpan": ["perl-cpan", "config", {}],
+    ".cshrc": ["csh", "config"],
+    ".cvspass": ["cvs", "key"],
+    ".dbus": ["dbus", {
+        "session-bus": ["dbus", "session"]
+    }],
+    ".dconf": ["gnome", "config", {}],
+    ".dolphin-emu": ["dolphin", "config", {}],
+    ".eclipse": ["eclipse", "config"],
+    ".emacs": ["emacs", "config"],
+    ".emacs.d": ["emacs", "config", {}],
+    ".esd_auth": ["pulse-audio", "session"],
+    ".evolution": ["evolution", "config"],
+    ".fontconfig": ["fontconfig", "cache", {}],
+    ".fonts.conf": ["fontconfig", "config"],
+    ".fonts.conf.d": ["fontconfig", "config", {}],
+    ".gconf": ["gnome", "config", {}],
+    ".gem": ["ruby", "install", {}],
+    ".get_iplayer": ["get_iplayer", "config", {}],
+    ".gitconfig": ["git", "config"],
+    ".gksu.lock": ["gnome", "cache"],
+    ".gnome2": ["gnome", {}],
+    ".gnome2_private": ["gnome", {}],
+    ".gnupg": ["gnupg", {
+        "gpg-agent.conf": ["gnupg", "config"],
+        "gpg.conf": ["gnupg", "config"],
+        "private-keys-v1.d": ["gnupg", "keys", {}],
+        "pubring.kbx": ["gnupg", "keys"]
+    }],
+    ".gtk-bookmarks": ["gnome", "config"],
+    ".gvfs": ["gnome", "session", {}],
+    ".hgrc": ["mercurial", "config"],
+    ".hgtags": ["mercurial", "config"],
+    ".histfile": ["zsh", "history"],
+    ".ICEauthority": ["x", "session"],
+    ".idlerc": ["python-idle", "config"],
+    ".imap": ["dovecot", {
+        "dovecot.mailbox.log": ["dovecot", "log"]
+    }],
+    ".inputrc": ["readline", "config"],
+    ".irssi": ["irssi", {
+        "away.log": ["irssi", "log"],
+        "config": ["irssi", "config"],
+        "scripts": ["irssi", "install", {}]
+    }],
+    ".kde": ["kde", {}],
+    ".kde4": ["kde", {}],
+    ".kpcli-history": ["kpcli", "history"],
+    ".lesshst": ["less", "history"],
+    ".lmmsrc.xml": ["lmms", "config"],
+    ".local": [{
+        "share": [{
+            "profanity": ["profanity", {
+                "accounts": ["profanity", "config"],
+                "chatlogs": ["profanity", "logs", {}],
+                "logs": ["profanity", "logs", {}]
+            }]
+        }]
+    }],
+    ".magick": ["imagemagick", "config", {}],
+    ".metacity": ["gnome", "config", {}],
+    ".minecraft": ["minecraft", "config", {}],
+    ".minttyrc": ["mintty", "config"],
+    ".mozilla": [{
+        "firefox": ["firefox", "config", {}]
+    }],
+    ".mozilla-thunderbird": ["thunderbird", "config", {}],
+    ".mplayer": ["mplayer", "config", {}],
+    ".muttrc": ["mutt", "config"],
+    ".my.cnf": ["mysql", "config"],
+    ".mysql_history": ["mysql", "history"],
+    ".nano_history": ["nano", "history"],
+    ".netbeans": ["netbeans", "config", {}],
+    ".netrc": ["ftp", "key"],
+    ".npm": ["npm", "cache", {}],
+    ".npmrc": ["npm", "config"],
+    ".octave_hist": ["octave", "history"],
+    ".pgpass": ["postgres", "key"],
+    ".pgpkey": ["system", "config"],
+    ".photorec.cfg": ["photorec", "config"],
+    ".php_history": ["php", "history"],
+    ".pinerc": ["alpine", "config"],
+    ".pip": ["pip", {
+        "pip.log": ["pip", "log"]
+    }],
+    ".pki": ["gnome-keyring", {}],
+    ".plan": ["system", "config"],
+    ".profile": ["shell", "config"],
+    ".project": ["system", "config"],
+    ".psql_history": ["postgres", "history"],
+    ".psqlrc": ["postgres", "config"],
+    ".pulse": ["pulse-audio", "cache", {}],
+    ".pulse-cookie": ["pulse-audio", "session"],
+    ".purple": ["pidgin", "config", {
+        "logs": ["pidgin", "logs", {}],
+        "plugins": ["pidgin", "install", {}]
+    }],
+    ".python_history": ["python3", "history"],
+    ".qalculate": ["qalculate", {
+        "qalculate-gtk.cfg": ["qalculate", "config"],
+        "definitions": ["qalculate", "config", {}]
+    }],
+    ".recently-used": ["gnome", "history"],
+    ".rnd": ["system", "cache"],
+    ".screenrc": ["screen", "config"],
+    ".selected_editor": ["system", "config"],
+    ".Skype": ["skype", "config", {}],
+    ".sqlite_history": ["sqlite3", "history"],
+    ".sqliterc": ["sqlite3", "config"],
+    ".ssh": ["ssh", {
+        "authorized_keys": ["ssh", "config"],
+        "authorized_keys2": ["ssh", "config"],
+        "config": ["ssh", "config"],
+        "id_dsa": ["ssh", "key"],
+        "id_rsa": ["ssh", "key"],
+        "known_hosts": ["ssh", "cache"]
+    }],
+    ".steam": ["steam", "install", {}],
+    ".steampath": ["steam", "install", {}],
+    ".steampid": ["steam", "session"],
+    ".subversion": ["subversion", "config", {}],
+    ".subscriptions": ["dovecot", "config"],
+    ".thumbnails": ["kde, gnome", "cache", {}],
+    ".thunderbird": ["thunderbird", "config", {}],
+    ".tmux.conf": ["tmux", "config"],
+    ".tmuxinator": ["tmuxinator", "config", {}],
+    ".ttytterrc": ["ttytter", "config"],
+    ".vimrc": ["vim", "config"],
+    ".viminfo": ["vim", "config"],
+    ".vnc": ["vnc", "config", {}],
+    ".VirtualBox": ["virtualbox", "config", {}],
+    ".w3m": ["w3m", {
+        "history": ["w3m", "history"]
+    }],
+    ".wine": ["wine", "config", {}],
+    ".wireshark": ["wireshark", "config", {}],
+    ".Xauthority": ["x", "session"],
+    ".xcompmgrrc": ["x", "config"],
+    ".xinitrc": ["x", "config"],
+    ".xscreensaver": ["xscreensaver", "config"],
+    ".xsession-errors": ["x", "log"],
+    ".xsession.log": ["x", "log"],
+    ".zlogin": ["zsh", "config"],
+    ".zlogout": ["zsh", "config"],
+    ".zprofile": ["zsh", "config"],
+    ".zshenv": ["zsh", "config"],
+    ".zshrc": ["zsh", "config"]
+}
