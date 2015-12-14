@@ -1,10 +1,10 @@
-# HomeSpy
+# What The Dot
 
 A tool for identifying dotfiles in a home directory.
 
 ## Usage
 
-Run `home.py` to scan your home directory.  Pass `-c` for colourful output if your terminal supports it.  You can set an alternative start directory with `-r <new root>`.
+Run `wtd.py` to scan your home directory.  Pass `-c` for colourful output if your terminal supports it.  You can set an alternative start directory with `-r <new root>`.
 
 ## Known files
 
