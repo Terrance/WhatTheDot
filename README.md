@@ -13,10 +13,12 @@ The list of identified files is stored in `known.json`.  This is a single JSON o
 The format for an individual file may look like the following:
 
 ```
-filename: [program, type, description, {directory contents}]
+filename: {"program": program, "type": type, "files": {directory contents}]
 ```
 
-All fields are optional, though directories must specify a nested object (it can be empty).  Excluding this, the first field is interpreted as the program name, and any others are listed beside it.
+All fields are optional, though directories must specify a nested `files` object (it can be empty).
+
+For files used by multiple programs, specify a `programs` attribute with a list of names instead.
 
 ### File types
 

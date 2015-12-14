@@ -1,203 +1,216 @@
 {
-    ".addressbook": ["alpine", "config"],
-    ".alias": ["csh", "config"],
-    ".appcfg_cookies": ["app-engine", "session"],
-    ".appcfg_nag": ["app-engine", "config"],
-    ".appcfg_oauth2_tokens": ["app-engine", "session"],
-    ".aptitude": ["aptitude", {
-        "cache": ["aptitude", "cache"],
-        "config": ["aptitude", "config"]
-    }],
-    ".bash_history": ["bash", "history"],
-    ".bashrc": ["bash", "config"],
-    ".bash_login": ["bash", "config"],
-    ".bash_logout": ["bash", "config"],
-    ".bash_profile": ["bash", "config"],
-    ".blender": ["blender", "config", {}],
-    ".bogofilter": ["bogofilter", {
-        "wordlist.db": ["bogofilter", "config"]
-    }],
-    ".cache": [{
-        "chromium": ["chromium", "cache", {}],
-        "google-chrome": ["chrome", "cache", {}]
-    }],
-    ".config": [{
-        "chromium": ["chromium", "config", {}],
-        "evolution": ["evolution", "config", {}],
-        "fish": ["fish", {
-            "config.fish": ["fish", "config"],
-            "fish_history": ["fish", "history"]
-        }],
-        "fontconfig": ["fontconfig", {
-            "conf.d": ["fontconfig", "config", {}],
-            "fonts.conf": ["fontconfig", "config"]
-        }],
-        "google-chrome": ["chrome", "config", {}],
-        "hangups": ["hangups", {
-            "hangups.conf": ["hangups", "config"]
-        }],
-        "htop": ["htop", {
-            "htoprc": ["htop", "config"]
-        }],
-        "keybase": ["keybase", {
-            "config.json": ["keybase", "config"]
-        }],
-        "pacmatic": ["pacmatic", "config"],
-        "profanity": ["profanity", {
-            "profrc": ["profanity", "config"],
-            "themes": ["profanity", "config", {}]
-        }],
-        "syncthing": ["syncthing", {
-            "cert.pem": ["syncthing", "key"],
-            "config.xml": ["syncthing", "config"],
-            "key.pem": ["syncthing", "key"]
-        }]
-    }],
-    ".cpan": ["perl-cpan", "config", {}],
-    ".cshrc": ["csh", "config"],
-    ".cvspass": ["cvs", "key"],
-    ".dbus": ["dbus", {
-        "session-bus": ["dbus", "session"]
-    }],
-    ".dconf": ["gnome", "config", {}],
-    ".dolphin-emu": ["dolphin", "config", {}],
-    ".eclipse": ["eclipse", "config"],
-    ".emacs": ["emacs", "config"],
-    ".emacs.d": ["emacs", "config", {}],
-    ".esd_auth": ["pulse-audio", "session"],
-    ".evolution": ["evolution", "config"],
-    ".fontconfig": ["fontconfig", "cache", {}],
-    ".fonts.conf": ["fontconfig", "config"],
-    ".fonts.conf.d": ["fontconfig", "config", {}],
-    ".gconf": ["gnome", "config", {}],
-    ".gem": ["ruby", "install", {}],
-    ".get_iplayer": ["get_iplayer", "config", {}],
-    ".gitconfig": ["git", "config"],
-    ".gksu.lock": ["gnome", "cache"],
-    ".gnome2": ["gnome", {}],
-    ".gnome2_private": ["gnome", {}],
-    ".gnupg": ["gnupg", {
-        "gpg-agent.conf": ["gnupg", "config"],
-        "gpg.conf": ["gnupg", "config"],
-        "private-keys-v1.d": ["gnupg", "keys", {}],
-        "pubring.kbx": ["gnupg", "keys"]
-    }],
-    ".gtk-bookmarks": ["gnome", "config"],
-    ".gvfs": ["gnome", "session", {}],
-    ".hgrc": ["mercurial", "config"],
-    ".hgtags": ["mercurial", "config"],
-    ".histfile": ["zsh", "history"],
-    ".ICEauthority": ["x", "session"],
-    ".idlerc": ["python-idle", "config"],
-    ".imap": ["dovecot", {
-        "dovecot.mailbox.log": ["dovecot", "log"]
-    }],
-    ".inputrc": ["readline", "config"],
-    ".irssi": ["irssi", {
-        "away.log": ["irssi", "log"],
-        "config": ["irssi", "config"],
-        "scripts": ["irssi", "install", {}]
-    }],
-    ".kde": ["kde", {}],
-    ".kde4": ["kde", {}],
-    ".kpcli-history": ["kpcli", "history"],
-    ".lesshst": ["less", "history"],
-    ".lmmsrc.xml": ["lmms", "config"],
-    ".local": [{
-        "share": [{
-            "profanity": ["profanity", {
-                "accounts": ["profanity", "config"],
-                "chatlogs": ["profanity", "logs", {}],
-                "logs": ["profanity", "logs", {}]
-            }]
-        }]
-    }],
-    ".magick": ["imagemagick", "config", {}],
-    ".metacity": ["gnome", "config", {}],
-    ".minecraft": ["minecraft", "config", {}],
-    ".minttyrc": ["mintty", "config"],
-    ".mozilla": [{
-        "firefox": ["firefox", "config", {}]
-    }],
-    ".mozilla-thunderbird": ["thunderbird", "config", {}],
-    ".mplayer": ["mplayer", "config", {}],
-    ".muttrc": ["mutt", "config"],
-    ".my.cnf": ["mysql", "config"],
-    ".mysql_history": ["mysql", "history"],
-    ".nano_history": ["nano", "history"],
-    ".netbeans": ["netbeans", "config", {}],
-    ".netrc": ["ftp", "key"],
-    ".npm": ["npm", "cache", {}],
-    ".npmrc": ["npm", "config"],
-    ".octave_hist": ["octave", "history"],
-    ".pgpass": ["postgres", "key"],
-    ".pgpkey": ["system", "config"],
-    ".photorec.cfg": ["photorec", "config"],
-    ".php_history": ["php", "history"],
-    ".pinerc": ["alpine", "config"],
-    ".pip": ["pip", {
-        "pip.log": ["pip", "log"]
-    }],
-    ".pki": ["gnome-keyring", {}],
-    ".plan": ["system", "config"],
-    ".profile": ["shell", "config"],
-    ".project": ["system", "config"],
-    ".psql_history": ["postgres", "history"],
-    ".psqlrc": ["postgres", "config"],
-    ".pulse": ["pulse-audio", "cache", {}],
-    ".pulse-cookie": ["pulse-audio", "session"],
-    ".purple": ["pidgin", "config", {
-        "logs": ["pidgin", "logs", {}],
-        "plugins": ["pidgin", "install", {}]
-    }],
-    ".python_history": ["python3", "history"],
-    ".qalculate": ["qalculate", {
-        "qalculate-gtk.cfg": ["qalculate", "config"],
-        "definitions": ["qalculate", "config", {}]
-    }],
-    ".recently-used": ["gnome", "history"],
-    ".rnd": ["system", "cache"],
-    ".screenrc": ["screen", "config"],
-    ".selected_editor": ["system", "config"],
-    ".Skype": ["skype", "config", {}],
-    ".sqlite_history": ["sqlite3", "history"],
-    ".sqliterc": ["sqlite3", "config"],
-    ".ssh": ["ssh", {
-        "authorized_keys": ["ssh", "config"],
-        "authorized_keys2": ["ssh", "config"],
-        "config": ["ssh", "config"],
-        "id_dsa": ["ssh", "key"],
-        "id_rsa": ["ssh", "key"],
-        "known_hosts": ["ssh", "cache"]
-    }],
-    ".steam": ["steam", "install", {}],
-    ".steampath": ["steam", "install", {}],
-    ".steampid": ["steam", "session"],
-    ".subversion": ["subversion", "config", {}],
-    ".subscriptions": ["dovecot", "config"],
-    ".thumbnails": ["kde, gnome", "cache", {}],
-    ".thunderbird": ["thunderbird", "config", {}],
-    ".tmux.conf": ["tmux", "config"],
-    ".tmuxinator": ["tmuxinator", "config", {}],
-    ".ttytterrc": ["ttytter", "config"],
-    ".vimrc": ["vim", "config"],
-    ".viminfo": ["vim", "config"],
-    ".vnc": ["vnc", "config", {}],
-    ".VirtualBox": ["virtualbox", "config", {}],
-    ".w3m": ["w3m", {
-        "history": ["w3m", "history"]
-    }],
-    ".wine": ["wine", "config", {}],
-    ".wireshark": ["wireshark", "config", {}],
-    ".Xauthority": ["x", "session"],
-    ".xcompmgrrc": ["x", "config"],
-    ".xinitrc": ["x", "config"],
-    ".xscreensaver": ["xscreensaver", "config"],
-    ".xsession-errors": ["x", "log"],
-    ".xsession.log": ["x", "log"],
-    ".zlogin": ["zsh", "config"],
-    ".zlogout": ["zsh", "config"],
-    ".zprofile": ["zsh", "config"],
-    ".zshenv": ["zsh", "config"],
-    ".zshrc": ["zsh", "config"]
+    ".addressbook": {"program": "alpine", "type": "config"},
+    ".appcfg_cookies": {"program": "app-engine", "type": "session"},
+    ".appcfg_nag": {"program": "app-engine", "type": "config"},
+    ".appcfg_oauth2_tokens": {"program": "app-engine", "type": "session"},
+    ".aptitude": {"program": "aptitude", "files": {
+        "cache": {"program": "aptitude", "type": "cache"},
+        "config": {"program": "aptitude", "type": "config"}
+    }},
+    ".bash_history": {"program": "bash", "type": "history"},
+    ".bashrc": {"program": "bash", "type": "config"},
+    ".bash_login": {"program": "bash", "type": "config"},
+    ".bash_logout": {"program": "bash", "type": "config"},
+    ".bash_profile": {"program": "bash", "type": "config"},
+    ".blender": {"program": "blender", "type": "config", "files": {}},
+    ".bogofilter": {"program": "bogofilter", "files": {
+        "wordlist.db": {"program": "bogofilter", "type": "config"}
+    }},
+    ".cache": {"files": {
+        "chromium": {"program": "chromium", "type": "cache", "files": {}},
+        "google-chrome": {"program": "chrome", "type": "cache", "files": {}},
+        "pip": {"program": "pip", "type": "cache", "files": {}},
+        "youtube-dl": {"program": "youtube-dl", "type": "cache", "files": {}}
+    }},
+    ".config": {"files": {
+        "chromium": {"program": "chromium", "type": "config", "files": {}},
+        "evolution": {"program": "evolution", "type": "config", "files": {}},
+        "fish": {"program": "fish", "files": {
+            "config.fish": {"program": "fish", "type": "config"},
+            "fish_history": {"program": "fish", "type": "history"}
+        }},
+        "fontconfig": {"program": "fontconfig", "files": {
+            "conf.d": {"program": "fontconfig", "type": "config", "files": {}},
+            "fonts.conf": {"program": "fontconfig", "type": "config"}
+        }},
+        "google-chrome": {"program": "chrome", "type": "config", "files": {}},
+        "hangups": {"program": "hangups", "files": {
+            "hangups.conf": {"program": "hangups", "type": "config"}
+        }},
+        "htop": {"program": "htop", "files": {
+            "htoprc": {"program": "htop", "type": "config"}
+        }},
+        "keybase": {"program": "keybase", "files": {
+            "config.json": {"program": "keybase", "type": "config"}
+        }},
+        "pacmatic": {"program": "pacmatic", "type": "config"},
+        "profanity": {"program": "profanity", "files": {
+            "profrc": {"program": "profanity", "type": "config"},
+            "themes": {"program": "profanity", "type": "config", "files": {}}
+        }},
+        "syncthing": {"program": "syncthing", "files": {
+            "cert.pem": {"program": "syncthing", "type": "key"},
+            "config.xml": {"program": "syncthing", "type": "config"},
+            "key.pem": {"program": "syncthing", "type": "key"}
+        }},
+        "youtube-dl": {"program": "youtube-dl", "files": {
+            "config": {"program": "youtube-dl", "type": "config"}
+        }}
+    }},
+    ".cpan": {"program": "perl-cpan", "type": "config", "files": {}},
+    ".cshrc": {"program": "csh", "type": "config"},
+    ".curlrc": {"program": "curl", "type": "config"},
+    ".cvspass": {"program": "cvs", "type": "key"},
+    ".dbus": {"program": "dbus", "files": {
+        "session-bus": {"program": "dbus", "type": "session"}
+    }},
+    ".dconf": {"program": "gnome", "type": "config", "files": {}},
+    ".dolphin-emu": {"program": "dolphin", "type": "config", "files": {}},
+    ".eclipse": {"program": "eclipse", "type": "config"},
+    ".elinks": {"program": "elinks", "type": "config"},
+    ".emacs": {"program": "emacs", "type": "config"},
+    ".emacs.d": {"program": "emacs", "type": "config", "files": {}},
+    ".esd_auth": {"program": "pulse-audio", "type": "session"},
+    ".evolution": {"program": "evolution", "type": "config"},
+    ".fontconfig": {"program": "fontconfig", "type": "cache", "files": {}},
+    ".fonts.conf": {"program": "fontconfig", "type": "config"},
+    ".fonts.conf.d": {"program": "fontconfig", "type": "config", "files": {}},
+    ".gconf": {"program": "gnome", "type": "config", "files": {}},
+    ".gem": {"program": "ruby", "type": "install", "files": {}},
+    ".get_iplayer": {"program": "get_iplayer", "type": "config", "files": {}},
+    ".gitconfig": {"program": "git", "type": "config"},
+    ".gksu.lock": {"program": "gnome", "type": "cache"},
+    ".gnome2": {"program": "gnome", "files": {}},
+    ".gnome2_private": {"program": "gnome", "files": {}},
+    ".gnupg": {"program": "gnupg", "files": {
+        "gpg-agent.conf": {"program": "gnupg", "type": "config"},
+        "gpg.conf": {"program": "gnupg", "type": "config"},
+        "private-keys-v1.d": {"program": "gnupg", "type": "keys", "files": {}},
+        "pubring.kbx": {"program": "gnupg", "type": "keys"}
+    }},
+    ".gtk-bookmarks": {"program": "gnome", "type": "config"},
+    ".gvfs": {"program": "gnome", "type": "session", "files": {}},
+    ".hgrc": {"program": "mercurial", "type": "config"},
+    ".hgtags": {"program": "mercurial", "type": "config"},
+    ".histfile": {"program": "zsh", "type": "history"},
+    ".ICEauthority": {"program": "x", "type": "session"},
+    ".idlerc": {"program": "python-idle", "type": "config"},
+    ".imap": {"program": "dovecot", "files": {
+        "dovecot.mailbox.log": {"program": "dovecot", "type": "log"}
+    }},
+    ".inputrc": {"program": "readline", "type": "config"},
+    ".irssi": {"program": "irssi", "files": {
+        "away.log": {"program": "irssi", "type": "log"},
+        "config": {"program": "irssi", "type": "config"},
+        "scripts": {"program": "irssi", "type": "install", "files": {}}
+    }},
+    ".kde": {"program": "kde", "files": {}},
+    ".kde3": {"program": "kde", "files": {}},
+    ".kde4": {"program": "kde", "files": {}},
+    ".kde5": {"program": "kde", "files": {}},
+    ".kpcli-history": {"program": "kpcli", "type": "history"},
+    ".lesshst": {"program": "less", "type": "history"},
+    ".lmmsrc.xml": {"program": "lmms", "type": "config"},
+    ".local": {"files": {
+        "share": {"files": {
+            "profanity": {"program": "profanity", "files": {
+                "accounts": {"program": "profanity", "type": "config"},
+                "chatlogs": {"program": "profanity", "type": "log", "files": {}},
+                "logs": {"program": "profanity", "type": "log", "files": {}}
+            }}
+        }}
+    }},
+    ".magick": {"program": "imagemagick", "type": "config", "files": {}},
+    ".metacity": {"program": "gnome", "type": "config", "files": {}},
+    ".minecraft": {"program": "minecraft", "type": "config", "files": {}},
+    ".minttyrc": {"program": "mintty", "type": "config"},
+    ".mozilla": {"files": {
+        "firefox": {"program": "firefox", "type": "config", "files": {}}
+    }},
+    ".mozilla-thunderbird": {"program": "thunderbird", "type": "config", "files": {}},
+    ".mplayer": {"program": "mplayer", "type": "config", "files": {}},
+    ".muttrc": {"program": "mutt", "type": "config"},
+    ".my.cnf": {"program": "mysql", "type": "config"},
+    ".mysql_history": {"program": "mysql", "type": "history"},
+    ".nano_history": {"program": "nano", "type": "history"},
+    ".netbeans": {"program": "netbeans", "type": "config", "files": {}},
+    ".netrc": {"program": "ftp", "type": "key"},
+    ".npm": {"program": "npm", "type": "cache", "files": {}},
+    ".npmrc": {"program": "npm", "type": "config"},
+    ".octave_hist": {"program": "octave", "type": "history"},
+    ".pgpass": {"program": "postgres", "type": "key"},
+    ".pgpkey": {"program": "system", "type": "config"},
+    ".photorec.cfg": {"program": "photorec", "type": "config"},
+    ".php_history": {"program": "php", "type": "history"},
+    ".pinerc": {"program": "alpine", "type": "config"},
+    ".pip": {"program": "pip", "files": {
+        "pip.conf": {"program": "pip", "type": "config"},
+        "pip.log": {"program": "pip", "type": "log"}
+    }},
+    ".pki": {"program": "gnome-keyring", "files": {}},
+    ".plan": {"program": "system", "type": "config"},
+    ".profile": {"program": "shell", "type": "config"},
+    ".project": {"program": "system", "type": "config"},
+    ".psql_history": {"program": "postgres", "type": "history"},
+    ".psqlrc": {"program": "postgres", "type": "config"},
+    ".pulse": {"program": "pulse-audio", "type": "cache", "files": {}},
+    ".pulse-cookie": {"program": "pulse-audio", "type": "session"},
+    ".purple": {"program": "pidgin", "type": "config", "files": {
+        "logs": {"program": "pidgin", "type": "log", "files": {}},
+        "plugins": {"program": "pidgin", "type": "install", "files": {}}
+    }},
+    ".python_history": {"program": "python", "type": "history"},
+    ".qalculate": {"program": "qalculate", "files": {
+        "qalculate-gtk.cfg": {"program": "qalculate", "type": "config"},
+        "definitions": {"program": "qalculate", "type": "config", "files": {}}
+    }},
+    ".recently-used": {"program": "gnome", "type": "history"},
+    ".rediscli_history": {"program": "redis-cli", "type": "history"},
+    ".rnd": {"program": "system", "type": "cache"},
+    ".screenrc": {"program": "screen", "type": "config"},
+    ".selected_editor": {"program": "system", "type": "config"},
+    ".Skype": {"program": "skype", "type": "config", "files": {}},
+    ".sqlite_history": {"program": "sqlite3", "type": "history"},
+    ".sqliterc": {"program": "sqlite3", "type": "config"},
+    ".ssh": {"program": "ssh", "files": {
+        "authorized_keys": {"program": "ssh", "type": "config"},
+        "authorized_keys2": {"program": "ssh", "type": "config"},
+        "config": {"program": "ssh", "type": "config"},
+        "id_dsa": {"program": "ssh", "type": "key"},
+        "id_rsa": {"program": "ssh", "type": "key"},
+        "known_hosts": {"program": "ssh", "type": "cache"}
+    }},
+    ".steam": {"program": "steam", "type": "install", "files": {}},
+    ".steampath": {"program": "steam", "type": "install", "files": {}},
+    ".steampid": {"program": "steam", "type": "session"},
+    ".subversion": {"program": "subversion", "type": "config", "files": {}},
+    ".subscriptions": {"program": "dovecot", "type": "config"},
+    ".texmf-config": {"program": "tex-live", "type": "config", "files": {}},
+    ".texmf-var": {"program": "tex-live", "type": "cache", "files": {}},
+    ".thumbnails": {"programs": ["kde", "gnome"], "type": "cache", "files": {}},
+    ".thunderbird": {"program": "thunderbird", "type": "config", "files": {}},
+    ".tmux.conf": {"program": "tmux", "type": "config"},
+    ".tmuxinator": {"program": "tmuxinator", "type": "config", "files": {}},
+    ".ttytterrc": {"program": "ttytter", "type": "config"},
+    ".vimrc": {"program": "vim", "type": "config"},
+    ".viminfo": {"program": "vim", "type": "config"},
+    ".vnc": {"program": "vnc", "type": "config", "files": {}},
+    ".VirtualBox": {"program": "virtualbox", "type": "config", "files": {}},
+    ".w3m": {"program": "w3m", "files": {
+        "config": {"program": "w3m", "type": "config"},
+        "history": {"program": "w3m", "type": "history"}
+    }},
+    ".wine": {"program": "wine", "type": "config", "files": {}},
+    ".wireshark": {"program": "wireshark", "type": "config", "files": {}},
+    ".Xauthority": {"program": "x", "type": "session"},
+    ".xcompmgrrc": {"program": "x", "type": "config"},
+    ".xinitrc": {"program": "x", "type": "config"},
+    ".xscreensaver": {"program": "xscreensaver", "type": "config"},
+    ".xsession-errors": {"program": "x", "type": "log"},
+    ".xsession.log": {"program": "x", "type": "log"},
+    ".zlogin": {"program": "zsh", "type": "config"},
+    ".zlogout": {"program": "zsh", "type": "config"},
+    ".zprofile": {"program": "zsh", "type": "config"},
+    ".zshenv": {"program": "zsh", "type": "config"},
+    ".zshrc": {"program": "zsh", "type": "config"}
 }
