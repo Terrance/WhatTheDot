@@ -78,8 +78,8 @@ if __name__ == "__main__":
     parser.add_argument("-c", "--colour", action="store_true", default=None, help="colorise output")
     parser.add_argument("-C", "--no-colour", action="store_false", dest="colour", help="don't colorise output")
     parser.add_argument("-r", "--root", default=os.path.expanduser("~"), help="override start directory")
-    parser.add_argument("-p", "--programs", action="store_true", help="organise by program, with info")
-    parser.add_argument("-a", "--all", action="store_true", help="just show all known files")
+    parser.add_argument("-f", "--format", choices=("tree", "programs"), default="tree", help="select output format")
+    parser.add_argument("-a", "--all", action="store_true", help="don't check if files exist")
     parser.add_argument("-o", "--old", action="store_true", help="look for possible old or backup files")
     args = parser.parse_args()
 
@@ -91,7 +91,7 @@ if __name__ == "__main__":
     os.chdir(args.root)
 
     found = walk((), known, {}, args.all, args.old)
-    if args.programs:
-        printProgs(found)
-    else:
+    if args.format == "tree":
         printTree(found)
+    elif args.format == "programs":
+        printProgs(found)

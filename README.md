@@ -4,7 +4,9 @@ A tool for identifying dotfiles in a home directory.
 
 ## Usage
 
-Run `wtd.py` to scan your home directory.  Pass `-c` for colourful output if your terminal supports it.  You can set an alternative start directory with `-r <new root>`.
+Run `wtd.py` to scan your home directory.  Pass `-c` to force colourful output if your terminal supports it.  You can set an alternative start directory with `-r <new root>`.  Only files that exist will be shown, use `-a` to skip existence checks.
+
+The default output format is a tree of files, though you can list by program with `-f programs`.
 
 ## Known files
 
