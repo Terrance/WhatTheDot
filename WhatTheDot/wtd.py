@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import json
 import os
 import sys
 
@@ -70,12 +69,14 @@ def printProgs(found):
 if __name__ == "__main__":
 
     import argparse
+    import json
 
     known = json.load(open(os.path.join(os.path.dirname(os.path.realpath(__file__)), "known.json"), "r"))
 
     parser = argparse.ArgumentParser(description="Identify dotfiles in a home directory.",
                                      epilog="File types can be one of: cache, config, history, install, key, log, session.")
-    parser.add_argument("-c", "--colour", action="store_true", help="colorise output")
+    parser.add_argument("-c", "--colour", action="store_true", default=None, help="colorise output")
+    parser.add_argument("-C", "--no-colour", action="store_false", dest="colour", help="don't colorise output")
     parser.add_argument("-r", "--root", default=os.path.expanduser("~"), help="override start directory")
     parser.add_argument("-p", "--programs", action="store_true", help="organise by program, with info")
     parser.add_argument("-a", "--all", action="store_true", help="just show all known files")
@@ -83,6 +84,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     usecolour = args.colour
+    if usecolour is None:
+        # Try to auto-detect colour availability.
+        usecolour = (hasattr(sys.stdout, "isatty") and sys.stdout.isatty())
+
     os.chdir(args.root)
 
     found = walk((), known, {}, args.all, args.old)
