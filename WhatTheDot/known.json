@@ -1,4 +1,5 @@
 {
+    ".ackrc": {"program": "ack", "type": "config"},
     ".addressbook": {"program": "alpine", "type": "config"},
     ".appcfg_cookies": {"program": "app-engine", "type": "session"},
     ".appcfg_nag": {"program": "app-engine", "type": "config"},
@@ -18,12 +19,18 @@
     }},
     ".cache": {"files": {
         "chromium": {"program": "chromium", "type": "cache", "files": {}},
+        "evolution": {"program": "evolution", "type": "cache", "files": {}},
         "google-chrome": {"program": "chrome", "type": "cache", "files": {}},
-        "pip": {"program": "pip", "type": "cache", "files": {}},
+        "mc": {"program": "midnight-commander", "type": "cache", "files": {}},
+        "motd.legal-displayed": {"program": "system", "type": "cache"},
+        "pip": {"program": "python-pip", "type": "cache", "files": {}},
+        "tracker": {"program": "tracker", "type": "cache", "files": {}},
+        "wallpaper": {"program": "system", "type": "cache", "files": {}},
         "youtube-dl": {"program": "youtube-dl", "type": "cache", "files": {}}
     }},
     ".config": {"files": {
         "chromium": {"program": "chromium", "type": "config", "files": {}},
+        "evince": {"program": "evince", "type": "config", "files": {}},
         "evolution": {"program": "evolution", "type": "config", "files": {}},
         "fish": {"program": "fish", "files": {
             "config.fish": {"program": "fish", "type": "config"},
@@ -33,6 +40,7 @@
             "conf.d": {"program": "fontconfig", "type": "config", "files": {}},
             "fonts.conf": {"program": "fontconfig", "type": "config"}
         }},
+        "gedit": {"program": "gedit", "type": "config", "files": {}},
         "google-chrome": {"program": "chrome", "type": "config", "files": {}},
         "hangups": {"program": "hangups", "files": {
             "hangups.conf": {"program": "hangups", "type": "config"}
@@ -43,16 +51,33 @@
         "keybase": {"program": "keybase", "files": {
             "config.json": {"program": "keybase", "type": "config"}
         }},
+        "ipython": {"program": "ipython", "type": "config"},
+        "keepassx": {"program": "keepassx", "type": "config"},
+        "libreoffice": {"program": "libreoffice", "type": "config", "files": {}},
+        "mc": {"program": "midnight-commander", "type": "config", "files": {}},
+        "MusicBrainz": {"files": {
+            "Picard": {"program": "musicbrainz-picard", "type": "config", "files": {}}
+        }},
+        "nautilus": {"program": "nautilus", "type": "config"},
         "pacmatic": {"program": "pacmatic", "type": "config"},
         "profanity": {"program": "profanity", "files": {
             "profrc": {"program": "profanity", "type": "config"},
             "themes": {"program": "profanity", "type": "config", "files": {}}
         }},
+        "sublime-text-2": {"program": "sublime-text", "type": "config", "files": {}},
+        "sublime-text-3": {"program": "sublime-text", "type": "config", "files": {}},
         "syncthing": {"program": "syncthing", "files": {
             "cert.pem": {"program": "syncthing", "type": "key"},
             "config.xml": {"program": "syncthing", "type": "config"},
+            "https-cert.pem": {"program": "syncthing", "type": "key"},
+            "https-key.pem": {"program": "syncthing", "type": "key"},
+            "index-v0.11.0.db": {"program": "syncthing", "type": "config"},
             "key.pem": {"program": "syncthing", "type": "key"}
         }},
+        "tracker": {"program": "tracker", "files": {
+            "tracker.cfg": {"program": "tracker", "type": "config"}
+        }},
+        "transmission": {"program": "transmission", "type": "config"},
         "youtube-dl": {"program": "youtube-dl", "files": {
             "config": {"program": "youtube-dl", "type": "config"}
         }}
@@ -67,6 +92,7 @@
     ".dconf": {"program": "gnome", "type": "config", "files": {}},
     ".dolphin-emu": {"program": "dolphin", "type": "config", "files": {}},
     ".eclipse": {"program": "eclipse", "type": "config"},
+    ".editrc": {"program": "system", "type": "config"},
     ".elinks": {"program": "elinks", "type": "config"},
     ".emacs": {"program": "emacs", "type": "config"},
     ".emacs.d": {"program": "emacs", "type": "config", "files": {}},
@@ -75,12 +101,15 @@
     ".fontconfig": {"program": "fontconfig", "type": "cache", "files": {}},
     ".fonts.conf": {"program": "fontconfig", "type": "config"},
     ".fonts.conf.d": {"program": "fontconfig", "type": "config", "files": {}},
+    ".forward": {"program": "sendmail", "type": "config"},
     ".gconf": {"program": "gnome", "type": "config", "files": {}},
     ".gem": {"program": "ruby", "type": "install", "files": {}},
     ".get_iplayer": {"program": "get_iplayer", "type": "config", "files": {}},
     ".gitconfig": {"program": "git", "type": "config"},
     ".gksu.lock": {"program": "gnome", "type": "cache"},
-    ".gnome2": {"program": "gnome", "files": {}},
+    ".gnome2": {"program": "gnome", "files": {
+        "keyrings": {"program": "gnome-keyring", "type": "key", "files": {}}
+    }},
     ".gnome2_private": {"program": "gnome", "files": {}},
     ".gnupg": {"program": "gnupg", "files": {
         "gpg-agent.conf": {"program": "gnupg", "type": "config"},
@@ -99,12 +128,17 @@
         "dovecot.mailbox.log": {"program": "dovecot", "type": "log"}
     }},
     ".inputrc": {"program": "readline", "type": "config"},
+    ".ipython": {"program": "ipython", "type": "config", "files": {}},
     ".irssi": {"program": "irssi", "files": {
         "away.log": {"program": "irssi", "type": "log"},
         "config": {"program": "irssi", "type": "config"},
         "scripts": {"program": "irssi", "type": "install", "files": {}}
     }},
-    ".kde": {"program": "kde", "files": {}},
+    ".kde": {"program": "kde", "files": {
+        "share": {"files": {
+            "config": {"program": "kde", "type": "config", "files": {}}
+        }}
+    }},
     ".kde3": {"program": "kde", "files": {}},
     ".kde4": {"program": "kde", "files": {}},
     ".kde5": {"program": "kde", "files": {}},
@@ -113,14 +147,20 @@
     ".lmmsrc.xml": {"program": "lmms", "type": "config"},
     ".local": {"files": {
         "share": {"files": {
+            "evolution": {"program": "evolution", "type": "config", "files": {}},
+            "mc": {"program": "midnight-commander", "type": "config", "files": {}},
             "profanity": {"program": "profanity", "files": {
                 "accounts": {"program": "profanity", "type": "config"},
                 "chatlogs": {"program": "profanity", "type": "log", "files": {}},
                 "logs": {"program": "profanity", "type": "log", "files": {}}
-            }}
+            }},
+            "tracker": {"program": "tracker", "type": "config", "files": {}},
+            "Trash": {"program": "system", "type": "cache", "files": {}},
+            "zeitgeist": {"program": "zeitgeist", "type": "config", "files": {}}
         }}
     }},
     ".magick": {"program": "imagemagick", "type": "config", "files": {}},
+    ".mc": {"program": "midnight-commander", "type": "config", "files": {}},
     ".metacity": {"program": "gnome", "type": "config", "files": {}},
     ".minecraft": {"program": "minecraft", "type": "config", "files": {}},
     ".minttyrc": {"program": "mintty", "type": "config"},
@@ -143,9 +183,9 @@
     ".photorec.cfg": {"program": "photorec", "type": "config"},
     ".php_history": {"program": "php", "type": "history"},
     ".pinerc": {"program": "alpine", "type": "config"},
-    ".pip": {"program": "pip", "files": {
-        "pip.conf": {"program": "pip", "type": "config"},
-        "pip.log": {"program": "pip", "type": "log"}
+    ".pip": {"program": "python-pip", "files": {
+        "pip.conf": {"program": "python-pip", "type": "config"},
+        "pip.log": {"program": "python-pip", "type": "log"}
     }},
     ".pki": {"program": "gnome-keyring", "files": {}},
     ".plan": {"program": "system", "type": "config"},
@@ -160,6 +200,7 @@
         "plugins": {"program": "pidgin", "type": "install", "files": {}}
     }},
     ".python_history": {"program": "python", "type": "history"},
+    ".pythonrc.py": {"program": "python", "type": "config"},
     ".qalculate": {"program": "qalculate", "files": {
         "qalculate-gtk.cfg": {"program": "qalculate", "type": "config"},
         "definitions": {"program": "qalculate", "type": "config", "files": {}}
@@ -177,7 +218,13 @@
         "authorized_keys2": {"program": "ssh", "type": "config"},
         "config": {"program": "ssh", "type": "config"},
         "id_dsa": {"program": "ssh", "type": "key"},
+        "id_dsa-cert": {"program": "ssh", "type": "key"},
+        "id_ecdsa": {"program": "ssh", "type": "key"},
+        "id_ecdsa-cert": {"program": "ssh", "type": "key"},
+        "id_ed25519": {"program": "ssh", "type": "key"},
+        "id_ed25519-cert": {"program": "ssh", "type": "key"},
         "id_rsa": {"program": "ssh", "type": "key"},
+        "id_rsa-cert": {"program": "ssh", "type": "key"},
         "known_hosts": {"program": "ssh", "type": "cache"}
     }},
     ".steam": {"program": "steam", "type": "install", "files": {}},
