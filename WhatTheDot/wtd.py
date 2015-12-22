@@ -53,7 +53,7 @@ def printTree(found):
     for fparts in sorted(found, key=lambda s: tuple(x.lower() for x in s)):
         print("{0}{1}".format("   " * (len(fparts) - 1), found[fparts]))
 
-def printProgs(found):
+def printProgs(found, programs):
     byprog = {}
     for fparts in sorted(found, key=lambda s: tuple(x.lower() for x in s)):
         progs = found[fparts].progs or []
@@ -62,6 +62,8 @@ def printProgs(found):
                 byprog[prog] = []
             byprog[prog].append((fparts[:-1], found[fparts]))
     for prog in sorted(byprog):
+        if programs and prog not in programs:
+            continue
         print(colour(6, prog))
         for fparent, file in byprog[prog]:
             print("   {0}{1}".format(os.path.join(os.path.join(*fparent), "") if fparent else "", file))
@@ -79,6 +81,7 @@ if __name__ == "__main__":
     parser.add_argument("-C", "--no-colour", action="store_false", dest="colour", help="don't colorise output")
     parser.add_argument("-r", "--root", default=os.path.expanduser("~"), help="override start directory")
     parser.add_argument("-f", "--format", choices=("tree", "programs"), default="tree", help="select output format")
+    parser.add_argument("-p", "--programs", nargs="+", help="filter to specific progam(s), needs `-f programs`")
     parser.add_argument("-a", "--all", action="store_true", help="don't check if files exist")
     parser.add_argument("-o", "--old", action="store_true", help="look for possible old or backup files")
     args = parser.parse_args()
@@ -94,4 +97,4 @@ if __name__ == "__main__":
     if args.format == "tree":
         printTree(found)
     elif args.format == "programs":
-        printProgs(found)
+        printProgs(found, args.programs)
