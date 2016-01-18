@@ -82,6 +82,8 @@
             "config": {"program": "youtube-dl", "type": "config"}
         }}
     }},
+    ".conky": {"program": "conky", "type": "install", "files": {}},
+    ".conkyrc": {"program": "conky", "type": "config"},
     ".cpan": {"program": "perl-cpan", "type": "config", "files": {}},
     ".cshrc": {"program": "csh", "type": "config"},
     ".curlrc": {"program": "curl", "type": "config"},
@@ -102,13 +104,31 @@
     ".fonts.conf": {"program": "fontconfig", "type": "config"},
     ".fonts.conf.d": {"program": "fontconfig", "type": "config", "files": {}},
     ".forward": {"program": "sendmail", "type": "config"},
-    ".gconf": {"program": "gnome", "type": "config", "files": {}},
+    ".gconf": {"program": "gnome", "type": "config", "files": {
+        "apps": {"files": {
+            "deja-dup": {"program": "deja-dup", "type": "config", "files": {}},
+            "evolution": {"program": "evolution", "type": "config", "files": {}},
+            "gnome-terminal": {"program": "gnome-terminal", "type": "config", "files": {}},
+            "metacity": {"program": "metacity", "type": "config", "files": {}},
+            "nautilus": {"program": "nautilus", "type": "config", "files": {}},
+            "panel": {"program": "gnome-panel", "type": "config", "files": {}}
+        }},
+        "desktop": {"files": {
+            "gnome": {"program": "gnome", "type": "config", "files": {}}
+        }}
+    }},
     ".gem": {"program": "ruby", "type": "install", "files": {}},
     ".get_iplayer": {"program": "get_iplayer", "type": "config", "files": {}},
     ".gitconfig": {"program": "git", "type": "config"},
     ".gksu.lock": {"program": "gnome", "type": "cache"},
     ".gnome2": {"program": "gnome", "files": {
-        "keyrings": {"program": "gnome-keyring", "type": "key", "files": {}}
+        "keyrings": {"program": "gnome-keyring", "type": "key", "files": {}},
+        "nautilus-scripts": {"program": "nautilus", "type": "install", "files": {}},
+        "panel2.d": {"program": "gnome-panel", "files": {
+            "default": {"files": {
+                "launchers": {"program": "gnome-panel", "type": "config", "files": {}}
+            }}
+        }}
     }},
     ".gnome2_private": {"program": "gnome", "files": {}},
     ".gnupg": {"program": "gnupg", "files": {
@@ -149,11 +169,15 @@
         "share": {"files": {
             "evolution": {"program": "evolution", "type": "config", "files": {}},
             "mc": {"program": "midnight-commander", "type": "config", "files": {}},
+            "nautilus": {"program": "nautilus", "type": "config", "files": {
+                "scripts": {"program": "nautilus", "type": "install", "files": {}}
+            }},
             "profanity": {"program": "profanity", "files": {
                 "accounts": {"program": "profanity", "type": "config"},
                 "chatlogs": {"program": "profanity", "type": "log", "files": {}},
                 "logs": {"program": "profanity", "type": "log", "files": {}}
             }},
+            "recently-used.xbel": {"program": "gnome", "type": "history"},
             "tracker": {"program": "tracker", "type": "config", "files": {}},
             "Trash": {"program": "system", "type": "cache", "files": {}},
             "zeitgeist": {"program": "zeitgeist", "type": "config", "files": {}}
@@ -161,7 +185,7 @@
     }},
     ".magick": {"program": "imagemagick", "type": "config", "files": {}},
     ".mc": {"program": "midnight-commander", "type": "config", "files": {}},
-    ".metacity": {"program": "gnome", "type": "config", "files": {}},
+    ".metacity": {"program": "metacity", "type": "config", "files": {}},
     ".minecraft": {"program": "minecraft", "type": "config", "files": {}},
     ".minttyrc": {"program": "mintty", "type": "config"},
     ".mozilla": {"files": {
@@ -169,15 +193,19 @@
     }},
     ".mozilla-thunderbird": {"program": "thunderbird", "type": "config", "files": {}},
     ".mplayer": {"program": "mplayer", "type": "config", "files": {}},
+    ".msmtprc": {"program": "msmtp", "type": "config"},
     ".muttrc": {"program": "mutt", "type": "config"},
     ".my.cnf": {"program": "mysql", "type": "config"},
     ".mysql_history": {"program": "mysql", "type": "history"},
     ".nano_history": {"program": "nano", "type": "history"},
+    ".nanorc": {"program": "nano", "type": "config"},
     ".netbeans": {"program": "netbeans", "type": "config", "files": {}},
     ".netrc": {"program": "ftp", "type": "key"},
     ".npm": {"program": "npm", "type": "cache", "files": {}},
     ".npmrc": {"program": "npm", "type": "config"},
     ".octave_hist": {"program": "octave", "type": "history"},
+    ".oysttyerkey": {"program": "oysttyer", "type": "key"},
+    ".oysttyerrc": {"program": "oysttyer", "type": "config"},
     ".pgpass": {"program": "postgres", "type": "key"},
     ".pgpkey": {"program": "system", "type": "config"},
     ".photorec.cfg": {"program": "photorec", "type": "config"},
@@ -193,6 +221,10 @@
     ".project": {"program": "system", "type": "config"},
     ".psql_history": {"program": "postgres", "type": "history"},
     ".psqlrc": {"program": "postgres", "type": "config"},
+    ".ptpython": {"program": "ptpython", "files": {
+        "config.py": {"program": "ptpython", "type": "config"},
+        "history": {"program": "ptpython", "type": "history"}
+    }},
     ".pulse": {"program": "pulse-audio", "type": "cache", "files": {}},
     ".pulse-cookie": {"program": "pulse-audio", "type": "session"},
     ".purple": {"program": "pidgin", "type": "config", "files": {
@@ -207,12 +239,16 @@
     }},
     ".recently-used": {"program": "gnome", "type": "history"},
     ".rediscli_history": {"program": "redis-cli", "type": "history"},
+    ".remote_api_shell_history": {"program": "app-engine", "type": "history"},
     ".rnd": {"program": "system", "type": "cache"},
     ".screenrc": {"program": "screen", "type": "config"},
     ".selected_editor": {"program": "system", "type": "config"},
+    ".shout": {"program": "shout-irc", "files": {
+        "config.js": {"program": "shout-irc", "type": "config"}
+    }},
     ".Skype": {"program": "skype", "type": "config", "files": {}},
-    ".sqlite_history": {"program": "sqlite3", "type": "history"},
-    ".sqliterc": {"program": "sqlite3", "type": "config"},
+    ".sqlite_history": {"program": "sqlite", "type": "history"},
+    ".sqliterc": {"program": "sqlite", "type": "config"},
     ".ssh": {"program": "ssh", "files": {
         "authorized_keys": {"program": "ssh", "type": "config"},
         "authorized_keys2": {"program": "ssh", "type": "config"},
@@ -238,6 +274,7 @@
     ".thunderbird": {"program": "thunderbird", "type": "config", "files": {}},
     ".tmux.conf": {"program": "tmux", "type": "config"},
     ".tmuxinator": {"program": "tmuxinator", "type": "config", "files": {}},
+    ".ttytterkey": {"program": "ttytter", "type": "key"},
     ".ttytterrc": {"program": "ttytter", "type": "config"},
     ".vimrc": {"program": "vim", "type": "config"},
     ".viminfo": {"program": "vim", "type": "config"},
