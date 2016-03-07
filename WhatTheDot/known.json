@@ -21,6 +21,10 @@
         "chromium": {"program": "chromium", "type": "cache", "files": {}},
         "evolution": {"program": "evolution", "type": "cache", "files": {}},
         "google-chrome": {"program": "chrome", "type": "cache", "files": {}},
+        "keybase": {"program": "keybase", "type": "cache", "files": {
+            "keybase.log": {"program": "keybase", "type": "log"},
+            "session.json": {"program": "keybase", "type": "session"}
+        }},
         "mc": {"program": "midnight-commander", "type": "cache", "files": {}},
         "motd.legal-displayed": {"program": "system", "type": "cache"},
         "pip": {"program": "python-pip", "type": "cache", "files": {}},
@@ -28,6 +32,10 @@
         "wallpaper": {"program": "system", "type": "cache", "files": {}},
         "youtube-dl": {"program": "youtube-dl", "type": "cache", "files": {}}
     }},
+    ".composer": {"program": "composer", "files": {
+        "cache": {"program": "composer", "type": "cache", "files": {}}
+    }},
+    ".console-history": {"program": "twosheds", "type": "history"},
     ".config": {"files": {
         "chromium": {"program": "chromium", "type": "config", "files": {}},
         "evince": {"program": "evince", "type": "config", "files": {}},
@@ -53,12 +61,20 @@
         }},
         "ipython": {"program": "ipython", "type": "config"},
         "keepassx": {"program": "keepassx", "type": "config"},
+        "keybase": {"program": "keybase", "type": "config", "files": {
+            "config.json": {"program": "keybase", "type": "config"},
+            "keybased.info": {"program": "keybase", "type": "cache"},
+            "keybased.pid": {"program": "keybase", "type": "cache"}
+        }},
         "libreoffice": {"program": "libreoffice", "type": "config", "files": {}},
         "mc": {"program": "midnight-commander", "type": "config", "files": {}},
         "MusicBrainz": {"files": {
             "Picard": {"program": "musicbrainz-picard", "type": "config", "files": {}}
         }},
         "nautilus": {"program": "nautilus", "type": "config"},
+        "pacaur": {"program": "pacaur", "type": "config", "files": {
+            "config": {"program": "pacaur", "type": "config"}
+        }},
         "pacmatic": {"program": "pacmatic", "type": "config"},
         "profanity": {"program": "profanity", "files": {
             "profrc": {"program": "profanity", "type": "config"},
@@ -183,6 +199,7 @@
             "zeitgeist": {"program": "zeitgeist", "type": "config", "files": {}}
         }}
     }},
+    "lynx.cfg": {"program": "lynx", "type": "config"},
     ".magick": {"program": "imagemagick", "type": "config", "files": {}},
     ".mc": {"program": "midnight-commander", "type": "config", "files": {}},
     ".metacity": {"program": "metacity", "type": "config", "files": {}},
@@ -201,6 +218,8 @@
     ".nanorc": {"program": "nano", "type": "config"},
     ".netbeans": {"program": "netbeans", "type": "config", "files": {}},
     ".netrc": {"program": "ftp", "type": "key"},
+    ".node-gyp": {"program": "node", "type": "install", "files": {}},
+    ".node_repl_history": {"program": "node", "type": "history"},
     ".npm": {"program": "npm", "type": "cache", "files": {}},
     ".npmrc": {"program": "npm", "type": "config"},
     ".octave_hist": {"program": "octave", "type": "history"},
