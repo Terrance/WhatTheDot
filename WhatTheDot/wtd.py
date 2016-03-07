@@ -6,6 +6,8 @@ import sys
 py3 = sys.version_info.major == 3
 vstr = str if py3 else basestring
 
+treesort = lambda s: tuple(x.lower().lstrip(".") for x in s)
+
 usecolour = False
 def colour(code, text):
     return "\033[{0}m{1}\033[0m".format(30 + code, text) if usecolour else text
@@ -50,12 +52,12 @@ def walk(root, known, found, showall, showold):
     return found
 
 def printTree(found):
-    for fparts in sorted(found, key=lambda s: tuple(x.lower() for x in s)):
+    for fparts in sorted(found, key=treesort):
         print("{0}{1}".format("   " * (len(fparts) - 1), found[fparts]))
 
 def printProgs(found, programs):
     byprog = {}
-    for fparts in sorted(found, key=lambda s: tuple(x.lower() for x in s)):
+    for fparts in sorted(found, key=treesort):
         progs = found[fparts].progs or []
         for prog in progs:
             if prog not in byprog:
@@ -80,8 +82,7 @@ if __name__ == "__main__":
     parser.add_argument("-c", "--colour", action="store_true", default=None, help="colorise output")
     parser.add_argument("-C", "--no-colour", action="store_false", dest="colour", help="don't colorise output")
     parser.add_argument("-r", "--root", default=os.path.expanduser("~"), help="override start directory")
-    parser.add_argument("-f", "--format", choices=("tree", "programs"), default="tree", help="select output format")
-    parser.add_argument("-p", "--programs", nargs="+", help="filter to specific progam(s), needs `-f programs`")
+    parser.add_argument("-p", "--programs", nargs="*", metavar="PROG", help="display as program list rather than tree")
     parser.add_argument("-a", "--all", action="store_true", help="don't check if files exist")
     parser.add_argument("-o", "--old", action="store_true", help="look for possible old or backup files")
     args = parser.parse_args()
@@ -94,7 +95,7 @@ if __name__ == "__main__":
     os.chdir(args.root)
 
     found = walk((), known, {}, args.all, args.old)
-    if args.format == "tree":
+    if args.programs is None:
         printTree(found)
-    elif args.format == "programs":
+    else:
         printProgs(found, args.programs)
