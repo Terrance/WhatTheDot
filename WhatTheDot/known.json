@@ -83,9 +83,9 @@
         "sublime-text-2": {"program": "sublime-text", "type": "config", "files": {}},
         "sublime-text-3": {"program": "sublime-text", "type": "config", "files": {}},
         "syncthing": {"program": "syncthing", "files": {
-            "cert.pem": {"program": "syncthing", "type": "key"},
+            "cert.pem": {"program": "syncthing", "type": "config"},
             "config.xml": {"program": "syncthing", "type": "config"},
-            "https-cert.pem": {"program": "syncthing", "type": "key"},
+            "https-cert.pem": {"program": "syncthing", "type": "config"},
             "https-key.pem": {"program": "syncthing", "type": "key"},
             "index-v0.11.0.db": {"program": "syncthing", "type": "config"},
             "key.pem": {"program": "syncthing", "type": "key"}
@@ -193,7 +193,7 @@
                 "chatlogs": {"program": "profanity", "type": "log", "files": {}},
                 "logs": {"program": "profanity", "type": "log", "files": {}}
             }},
-            "recently-used.xbel": {"program": "gnome", "type": "history"},
+            "recently-used.xbel": {"program": "gnome", "type": "cache"},
             "tracker": {"program": "tracker", "type": "config", "files": {}},
             "Trash": {"program": "system", "type": "cache", "files": {}},
             "zeitgeist": {"program": "zeitgeist", "type": "config", "files": {}}
